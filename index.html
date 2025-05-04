@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+<body>
+  <div class="container" id="login-card">
+    <h2>Login or Register</h2>
+    <input type="text" id="userId" placeholder="User ID" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <button onclick="register()">Register</button>
+  </div>
+
+  <div class="container" id="chat-card">
+    <h2>Welcome, <span id="me"></span></h2>
+    <div id="messages"></div>
+    <input type="text" id="to" placeholder="Send To (User ID)" />
+    <input type="text" id="text" placeholder="Enter your message..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
